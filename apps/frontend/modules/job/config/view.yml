@@ -1,0 +1,8 @@
+#template name
+indexSuccess: 
+  stylesheets: [jobs.css]
+ 
+showSuccess:
+  stylesheets: [job.css]
+  
+#all: ustawienia dla wszystkich akcji

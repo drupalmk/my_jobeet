@@ -12,5 +12,5 @@
  */
 class JobeetCategory extends BaseJobeetCategory
 {
-
+  
 }

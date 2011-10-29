@@ -13,9 +13,9 @@
 abstract class BaseJobeetJobForm extends BaseFormDoctrine
 {
   public function setup()
-  {
-    $this->setWidgets(array(
-      'id'           => new sfWidgetFormInputHidden(),
+  { 
+    $this->setWidgets(array(        
+     'id'           => new sfWidgetFormInputHidden(),
       'category_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('JobeetCategory'), 'add_empty' => false)),
       'type'         => new sfWidgetFormInputText(),
       'company'      => new sfWidgetFormInputText(),
