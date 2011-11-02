@@ -15,10 +15,11 @@ class jobActions extends sfActions
 //    $this->jobeet_jobs = Doctrine_Core::getTable('JobeetJob')
 //      ->createQuery('a')
 //      ->execute();
-    $q = Doctrine_Query::create()
-            ->from('JobeetJob j')
-            ->where('j.created_at > ?', date('Y-m-d H:i:s', time() - 86400 * 30)); 
-    $this->jobeet_jobs = $q->execute();
+//    $q = Doctrine_Query::create()
+//            ->from('JobeetJob j')
+//            ->where('j.expires_at > ?', date('Y-m-d H:i:s', time() - 86400 * 30)); 
+//    $this->jobeet_jobs = Doctrine_Core::getTable('JobeetJob')->getActiveJobs();
+      $this->categories = Doctrine_Core::getTable('JobeetCategory')->getWithJobs();
   }
 
   public function executeShow(sfWebRequest $request)
